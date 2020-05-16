@@ -328,8 +328,8 @@ a:focus,
 }
 
 .mu-logo img {
-	margin-top: -5px;
-	max-width: 50%;
+	margin-top: 10px;
+	max-width: 40%;
 }
 
 .mu-navbar .mu-logo:hover,
@@ -2808,7 +2808,7 @@ a:focus,
 
 	.mu-navbar-nav {
 		display: flex;
-		text-align: left;
+		text-align: right;
 		width: 100%;
 		margin-top: 10px;
 	}
