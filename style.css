@@ -35,7 +35,7 @@ html {
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
+	font-family: Oswald, 'Helvetica', sans-serif;
 	color: #666666;
 	font-size: 16px;
 	font-weight: 400;
@@ -1020,7 +1020,7 @@ a:focus,
 
 .counter-value {
 	font-size: 36px;
-	font-family: 'Helvetica', sans-serif;
+	font-family: Oswald, 'Helvetica', sans-serif;
 	font-weight: 700;
 	margin-bottom: 0;
 	color: #fff;
@@ -1145,7 +1145,7 @@ a:focus,
 .mu-single-pricebox h4 {
 	color: #002E5D;
 	font-size: 48px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: Oswald, 'Open Sans', sans-serif;
 }
 
 .mu-single-pricebox h4 > span {
