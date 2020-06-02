@@ -2727,7 +2727,9 @@ a:focus,
 	.mu-about-left {
 		padding-left: 0;
 	}
-
+	.mu-about-left img{
+		display: none;
+	}
 	.mu-quote-btn {
 		padding: 15px 45px;
 		margin-top: 15px;
@@ -2778,11 +2780,11 @@ a:focus,
 	/*About us page*/
 
 	.mu-single-team-img {
-		width: 26%;
+		width: 100%;
 	}
 
 	.mu-single-team-content {
-		width: 74%;
+		width: 100%;
 		padding: 10px 10px;
 	}
 
