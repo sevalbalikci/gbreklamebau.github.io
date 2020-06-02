@@ -558,12 +558,32 @@ a:focus,
 	padding-top: 0px;
 	margin-left: 1.7em;
 }
-
 .mu-about-left {
 	display: inline;
 	float: left;
 	padding-right: 15px;
 	width: 100%;
+}
+
+.mu-about-left ul {}
+
+.mu-about-left ul li {
+	list-style: none;
+	float: left;
+	margin-bottom: 25px;
+}
+
+.mu-about-left ul li h3 {
+	border-bottom: 3px solid #e5e5e5;
+	color: #323232;
+	font-size: 20px;
+	display: inline-block;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+}
+
+.mu-about-left p {
+	font-size: 14px;
 }
 
 .mu-about-right {
