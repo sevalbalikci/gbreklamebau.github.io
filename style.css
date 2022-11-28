@@ -885,13 +885,13 @@ a:focus,
 /* PORTFOLIO */
 /*--------------------*/
 
-#mu-portfolio {
+#mu-projekte {
 	display: inline;
 	float: left;
 	width: 100%;
 }
 
-.mu-portfolio-area {
+.mu-projekte-area {
 	display: inline;
 	float: left;
 	padding-top: 100px;
@@ -899,14 +899,14 @@ a:focus,
 	width: 100%;
 }
 
-.mu-portfolio-content{
+.mu-projekte-content{
 	display: inline;
 	float: left;
 	margin-top: 20px;
 	width: 100%;
 }
 
-.mu-portfolio-filter-area{
+.mu-projekte-filter-area{
 	display: inline;
 	float: left;
 	width: 100%;
@@ -1551,7 +1551,7 @@ a:focus,
 	width: 100%;
 }
 
-#mu-page-header-portfolio {
+#mu-page-header-projekte {
 	background-image: url(assets/images/collage.jpg);
 	background-position: center center;
 	background-size: cover;
@@ -3057,7 +3057,7 @@ a:focus,
 		padding: 10% 5%;
 	}
 
-	.mu-portfolio-area {
+	.mu-projekte-area {
 		padding: 60px 0;
 	}
 
