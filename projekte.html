@@ -49,7 +49,14 @@ Please contact seval.balikci18@gmail.com for more Information.
       <i class="fa fa-angle-up"></i>
     </a>
   <!-- END SCROLL TOP BUTTON -->
-  	
+  	<script>
+		window.onload = function() {
+			if(!window.location.hash) {
+				window.location = window.location + '#loaded';
+				window.location.reload();
+			}
+		}
+	</script>
   	<!-- Start Header -->
 	<header id="mu-hero">
 		<div class="container">
@@ -140,7 +147,7 @@ Please contact seval.balikci18@gmail.com for more Information.
 												'fridda1.jpg', 'fridda2.jpg', 'fridda3.jpg', 'fridda4.jpg', 'fridda5.jpg', 'fridda6.jpg', 'fridda7.jpg', 'fridda8.jpg', 
 												'fridda9.jpg', 'galliano1.jpg', 'galliano2.jpg', 'galliano3.jpg', 'gowest.jpg', 'gowest1.jpg', 'griffen.jpg', 'griffen1.jpg', 'griffen2.jpg', 'griffen3.jpg',
 												'grillmeister.jpg', 'handyman2.jpg', 'lacasa.jpg', 'mirano1.jpg', 'mirano2.jpg', 'mirano3.jpg', 'mirano4.jpg', 'mirano5.jpg', 'mirano6.jpg', 'ninaro1.jpg',
-												'ninaro2.jpg', 'sax.jpg', 'sinabel1.jpg', 'soliver1.jpg', 'succi1.jpg', 'velo1.jpg', 'velo2.jpg', 'velo3.jpg', 'welat.jpg'];
+												'ninaro2.jpg', 'sax.jpg', 'sinabel1.jpg', 'soliver1.jpg', 'velo1.jpg', 'velo2.jpg', 'velo3.jpg', 'welat.jpg'];
 												
 												const inner_projects = document.getElementById("projects_gallery");
 												let count = filenames.length;
