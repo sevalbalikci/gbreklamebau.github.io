@@ -39,6 +39,26 @@ body {
 	color: #666666;
 	font-size: 16px;
 	font-weight: 400;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+}
+.filtr-container {
+	height: 100vh;
+	scroll-snap-align: start;
+}
+  
+button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+#prev-button {
+	left: 20px;
+}
+
+#next-button {
+	right: 20px;
 }
 
 ul {
