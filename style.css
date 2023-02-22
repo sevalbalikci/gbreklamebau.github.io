@@ -42,10 +42,6 @@ body {
 	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
 }
-.filtr-container {
-	height: 100vh;
-	scroll-snap-align: start;
-}
   
 button {
 	position: fixed;
