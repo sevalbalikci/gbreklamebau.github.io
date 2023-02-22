@@ -281,13 +281,12 @@ Please contact seval.balikci18@gmail.com for more Information.
 				 'grillmeister.jpg', 'handyman2.jpg', 'lacasa.jpg', 'mirano1.jpg', 'mirano2.jpg', 'mirano3.jpg', 'mirano4.jpg', 'mirano5.jpg', 'mirano6.jpg', 'ninaro1.jpg',
 				  'ninaro2.jpg', 'sax.jpg', 'sinabel1.jpg', 'soliver1.jpg', 'succi1.jpg', 'velo1.jpg', 'velo2.jpg', 'velo3.jpg', 'welat.jpg'];
 				
+
+
 				let container_count = Math.ceil(filenames.length / 18);
 				
 				for (let j = 1; j <= container_count; j++) {
-					const inner_div = document.createElement('div');
-					inner_div.classList.add('filtr-container');
-					inner_div.id = 'projects_pictures' + j;
-					document.querySelector('.mu-projekte-content').appendChild(inner_div);
+					const inner_div = document.getElementById("projects_pictures" + j.toString(2));
 					
 					for (let i = (j - 1) * 18; i < j * 18 && i < filenames.length; i++) {
 						const filename = filenames[i];
@@ -340,7 +339,7 @@ Please contact seval.balikci18@gmail.com for more Information.
 								</div>
 							</div>
 
-							<div class="row" onshow="">
+							<div class="row">
 
 									<!-- Start Projekte Content -->
 									<div class="mu-projekte-content">
