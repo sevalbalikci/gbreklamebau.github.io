@@ -2408,6 +2408,11 @@ a:focus,
 	font-size: 14px;
 	color: #323232;
 }
+.mu-comments-area .comments .commentlist li .media-body a {
+	margin-bottom: 0px;
+	font-size: 14px;
+	color: #323232;
+}
 
 .mu-comments-area .comments .commentlist li .media-body .author-name {
 	margin-bottom: 0px;
