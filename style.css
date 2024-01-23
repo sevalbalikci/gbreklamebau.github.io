@@ -311,6 +311,57 @@ a:focus,
 	width: 100%;
 }
 
+.mu-header-line {
+    position: relative;
+    width: 100%;
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.mu-header-line .mu-blue-line,
+.mu-header-line .mu-red-line {
+    position: absolute;
+    bottom: 0;
+    width: 49%;
+    height: 10px;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+
+.mu-header-line .mu-blue-line {
+    left: 0;
+    background-color: #002E5D;
+	border-top: 10px solid transparent;
+    border-right: 10px solid white;
+	animation-name: slideInFromLeft;
+
+}
+
+.mu-header-line .mu-red-line {
+    right: 0;
+    background-color: #E21C21;
+	border-bottom: 10px solid transparent;
+    border-left: 10px solid white;
+	animation-name: slideInFromRight;
+}
+
 .mu-logo-area {
 	display: inline;
 	float: left;
