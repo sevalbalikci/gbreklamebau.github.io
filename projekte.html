@@ -146,27 +146,25 @@ Please contact seval.balikci18@gmail.com for more Information.
 										<div class="filtr-container" id="projects_gallery" style="height:7000px">
 
 							                <script>
-
-												const filenames = ['am.jpg', 'asm.jpg', 'asm1.jpg', 'asm2.jpg', 'atombody1.jpg', 'atombody2.jpg', 'atombody3.jpg', 
-												'back.jpg', 'beyti.jpg', 'beyti1.jpg', 'bluebox1.jpg', 'bluebox2.jpg', 'burger1.jpg', 'bykebap.jpg', 'centralstation.jpg', 
-												'derman1.jpg', 'derman2.jpg', 'derman3.jpg', 'derman4.jpg', 'derman5.jpg', 'derman6.jpg', 'extensions1.jpg', 
-												'fridda1.jpg', 'fridda2.jpg', 'fridda3.jpg', 'fridda4.jpg', 'fridda5.jpg', 'fridda6.jpg', 'fridda7.jpg', 'fridda8.jpg', 
-												'fridda9.jpg', 'galliano1.jpg', 'galliano2.jpg', 'galliano3.jpg', 'gowest.jpg', 'gowest1.jpg', 'griffen.jpg', 'griffen1.jpg', 'griffen2.jpg', 'griffen3.jpg',
-												'grillmeister.jpg', 'handyman2.jpg', 'lacasa.jpg', 'mirano1.jpg', 'mirano2.jpg', 'mirano3.jpg', 'mirano4.jpg', 'mirano5.jpg', 'mirano6.jpg', 'ninaro1.jpg',
-												'ninaro2.jpg', 'sax.jpg', 'sinabel1.jpg', 'soliver1.jpg', 'velo1.jpg', 'velo2.jpg', 'velo3.jpg', 'welat.jpg'];
-												
 												const inner_projects = document.getElementById("projects_gallery");
-												let count = filenames.length;
+												var count = 66;  	// count of project images
 	
-												for (let i = 0; i < count; i++)
+												for (let i = 1; i < count; i++)
 												{
-													let filename = filenames[i]
+													var filename = "product" + i.toString() + ".jpg";
 													inner_projects.innerHTML += 
 													`<div class="col-xs-6 col-sm-6 col-md-4 filtr-item" data-category="3">
 														<a class="mu-imglink" href="assets/images/projekte/${filename}" title="Project">
-															<img class="img-responsive" src="assets/images/projekte/${filename}" alt="image">														
+															<img class="img-responsive" src="assets/images/projekte/${filename}" alt="image" id="product${i} style="height: 348px; width: 261px;">
 														</a>
 													</div>`;
+
+													let currentImage = document.getElementById(`projectImage${i}`);
+													if (currentImage && currentImage.style) {
+														currentImage.style.height = '348px'; // Adjust the height as needed
+														currentImage.style.width = '261px'; // Adjust the width as needed
+													}
+										
 												}
 											</script>
 
