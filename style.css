@@ -565,7 +565,7 @@ a:focus,
 .mu-about-area {
 	display: inline;
 	float: left;
-	padding: 100px 0;
+	padding: 50px 0;
 	width: 100%;
 }
 
@@ -738,7 +738,7 @@ a:focus,
 	display: inline;
 	float: left;
 	width: 100%;
-	padding: 100px 0 0;
+	padding: 0 0 0;
 }
 
 .mu-service-area {
@@ -945,7 +945,7 @@ a:focus,
 .mu-projekte-area {
 	display: inline;
 	float: left;
-	padding-top: 100px;
+	padding-top: 10px;
 	padding-bottom: 100px;
 	width: 100%;
 }
