@@ -338,7 +338,7 @@ a:focus,
     position: absolute;
     bottom: 0;
     width: 49%;
-    height: 10px;
+    height: 13px;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
@@ -348,8 +348,8 @@ a:focus,
 .mu-header-line .mu-blue-line {
     left: 0;
     background-color: #002E5D;
-	border-top: 10px solid transparent;
-    border-right: 10px solid white;
+	border-top: 13px solid transparent;
+    border-right: 13px solid white;
 	animation-name: slideInFromLeft;
 
 }
@@ -357,8 +357,8 @@ a:focus,
 .mu-header-line .mu-red-line {
     right: 0;
     background-color: #E21C21;
-	border-bottom: 10px solid transparent;
-    border-left: 10px solid white;
+	border-bottom: 13px solid transparent;
+    border-left: 13px solid white;
 	animation-name: slideInFromRight;
 }
 
@@ -417,7 +417,7 @@ a:focus,
 }
 
 .mu-navbar-nav {
-	display: block;
+    display: flex;
 	text-align: right;
 	width: 100%;
 }
@@ -1462,7 +1462,7 @@ a:focus,
 	background-image: url(assets/images/footerimage.png);
 	display: inline;
 	float: left;
-	padding: 55px 0;
+	padding: 40px 0;
 	width: 100%;
 }
 
@@ -1516,6 +1516,10 @@ a:focus,
 	margin-right: 10px;
 }
 
+.mu-single-footer .list-unstyled li.media-phone span {
+	margin-right: 10px;
+}
+
 .mu-single-footer .list-unstyled li.media p {
 	line-height: 1.5;
 	margin-top: -5px;
@@ -1531,9 +1535,10 @@ a:focus,
 }
 
 .mu-single-footer .list-unstyled li.media a {
-	color: #666666;
-	font-size: 16px;
-	font-family: Raleway, 'Helvetica', sans-serif
+	line-height: 1.5;
+	margin-top: -5px;
+	margin-bottom: 4px;
+	font-size: 14px;
 }
 
 .mu-footer-bottom {
@@ -1621,6 +1626,16 @@ a:focus,
 
 #mu-page-header-products {
 	background-image: url(assets/images/products.jpg);
+	background-position: center center;
+	background-size: cover;
+	display: inline;
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+#mu-page-header-metalltechnik {
+	background-image: url(assets/images/metalltechnik.jpg);
 	background-position: center center;
 	background-size: cover;
 	display: inline;
