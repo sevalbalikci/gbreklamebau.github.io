@@ -931,7 +931,7 @@ a:focus,
 .mu-video-iframe-area iframe {
 
 }
-
+ 
 /*--------------------*/
 /* PORTFOLIO */
 /*--------------------*/
@@ -945,7 +945,7 @@ a:focus,
 .mu-projekte-area {
 	display: inline;
 	float: left;
-	padding-top: 10px;
+	padding-top: 100px;
 	padding-bottom: 100px;
 	width: 100%;
 }
