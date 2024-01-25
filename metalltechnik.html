@@ -46,6 +46,14 @@ Please contact seval.balikci18@gmail.com for more Information.
  
 	</head>
   <body>
+	<script>
+		window.onload = function() {
+			if(!window.location.hash) {
+				window.location = window.location + '#loaded';
+				window.location.reload();
+			}
+		}
+	</script>
 
    <!--START SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#">

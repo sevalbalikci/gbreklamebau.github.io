@@ -46,6 +46,16 @@ Please contact seval.balikci18@gmail.com for more Information.
  
 	</head>
   <body>
+	
+	<script>
+		window.onload = function() {
+			if(!window.location.hash) {
+				window.location = window.location + '#loaded';
+				window.location.reload();
+			}
+		}
+	</script>
+
 
    <!--START SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#">
@@ -268,7 +278,7 @@ Please contact seval.balikci18@gmail.com for more Information.
 												const inner_projects = document.getElementById("projects_gallery");
 												var count = 47;  	// count of project images
 	
-												for (let i = 1; i <= count; i++)
+												for (let i = count; i >= 1; i--)
 												{
 													var filename = "product" + i.toString() + ".jpg";
 													inner_projects.innerHTML += 
