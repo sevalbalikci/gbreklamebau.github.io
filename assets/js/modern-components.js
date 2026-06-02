@@ -192,6 +192,20 @@ document.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const submitBtn = form.querySelector(".submit-btn");
+
+  // Remove any existing alert
+  const existing = form.querySelector(".form-alert");
+  if (existing) existing.remove();
+
+  function showAlert(message, type) {
+    const alert = document.createElement("p");
+    alert.className = "form-alert form-alert--" + type;
+    alert.textContent = message;
+    submitBtn
+      ? submitBtn.insertAdjacentElement("afterend", alert)
+      : form.appendChild(alert);
+  }
+
   if (submitBtn) {
     submitBtn.innerHTML =
       '<i class="fa fa-spinner fa-spin"></i> Wird gesendet...';
@@ -205,17 +219,13 @@ document.addEventListener("submit", function (e) {
   })
     .then((response) => {
       if (response.ok) {
-        if (submitBtn) {
-          submitBtn.innerHTML = '<i class="fa fa-check"></i> Gesendet!';
-        }
         form.reset();
-        setTimeout(() => {
-          if (submitBtn) {
-            submitBtn.innerHTML =
-              'Nachricht senden <i class="fa fa-paper-plane"></i>';
-            submitBtn.disabled = false;
-          }
-        }, 3000);
+        showAlert("Vielen Dank! Ihre Nachricht wurde gesendet.", "success");
+        if (submitBtn) {
+          submitBtn.innerHTML =
+            'Nachricht senden <i class="fa fa-paper-plane"></i>';
+          submitBtn.disabled = false;
+        }
       } else {
         return response.json().then((data) => {
           throw new Error(
@@ -227,9 +237,10 @@ document.addEventListener("submit", function (e) {
       }
     })
     .catch((err) => {
+      showAlert("Fehler beim Senden. Bitte versuchen Sie es erneut.", "error");
       if (submitBtn) {
         submitBtn.innerHTML =
-          '<i class="fa fa-times"></i> Fehler – Bitte erneut versuchen';
+          'Nachricht senden <i class="fa fa-paper-plane"></i>';
         submitBtn.disabled = false;
       }
       console.error("Form submission error:", err);
