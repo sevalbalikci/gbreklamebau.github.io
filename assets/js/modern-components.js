@@ -184,59 +184,56 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Form Submission Handler
-document.addEventListener("DOMContentLoaded", function () {
-  const forms = document.querySelectorAll(".contact-form");
+// Form Submission Handler (delegated — works regardless of when the form is injected)
+document.addEventListener("submit", function (e) {
+  const form = e.target.closest(".contact-form");
+  if (!form) return;
 
-  forms.forEach((form) => {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  e.preventDefault();
 
-      const submitBtn = this.querySelector(".submit-btn");
-      if (submitBtn) {
-        submitBtn.innerHTML =
-          '<i class="fa fa-spinner fa-spin"></i> Wird gesendet...';
-        submitBtn.disabled = true;
-      }
+  const submitBtn = form.querySelector(".submit-btn");
+  if (submitBtn) {
+    submitBtn.innerHTML =
+      '<i class="fa fa-spinner fa-spin"></i> Wird gesendet...';
+    submitBtn.disabled = true;
+  }
 
-      fetch(this.action, {
-        method: "POST",
-        body: new FormData(this),
-        headers: { Accept: "application/json" },
-      })
-        .then((response) => {
-          if (response.ok) {
-            if (submitBtn) {
-              submitBtn.innerHTML = '<i class="fa fa-check"></i> Gesendet!';
-            }
-            form.reset();
-            setTimeout(() => {
-              if (submitBtn) {
-                submitBtn.innerHTML =
-                  'Nachricht senden <i class="fa fa-paper-plane"></i>';
-                submitBtn.disabled = false;
-              }
-            }, 3000);
-          } else {
-            return response.json().then((data) => {
-              throw new Error(
-                data.errors
-                  ? data.errors.map((e) => e.message).join(", ")
-                  : "Fehler beim Senden.",
-              );
-            });
-          }
-        })
-        .catch((err) => {
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { Accept: "application/json" },
+  })
+    .then((response) => {
+      if (response.ok) {
+        if (submitBtn) {
+          submitBtn.innerHTML = '<i class="fa fa-check"></i> Gesendet!';
+        }
+        form.reset();
+        setTimeout(() => {
           if (submitBtn) {
             submitBtn.innerHTML =
-              '<i class="fa fa-times"></i> Fehler – Bitte erneut versuchen';
+              'Nachricht senden <i class="fa fa-paper-plane"></i>';
             submitBtn.disabled = false;
           }
-          console.error("Form submission error:", err);
+        }, 3000);
+      } else {
+        return response.json().then((data) => {
+          throw new Error(
+            data.errors
+              ? data.errors.map((e) => e.message).join(", ")
+              : "Fehler beim Senden.",
+          );
         });
+      }
+    })
+    .catch((err) => {
+      if (submitBtn) {
+        submitBtn.innerHTML =
+          '<i class="fa fa-times"></i> Fehler – Bitte erneut versuchen';
+        submitBtn.disabled = false;
+      }
+      console.error("Form submission error:", err);
     });
-  });
 });
 
 // Counter Animation
