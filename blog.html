@@ -10,19 +10,19 @@
 
     <!-- Primary Meta Tags -->
     <title>
-      Blog - Tipps & Trends zu Leuchtreklame & Metalltechnik | G & B Reklamebau
+      Blog – Leuchtreklame & Metalltechnik Tipps Graz | G & B Reklamebau
     </title>
     <meta
       name="title"
-      content="Blog - Tipps & Trends zu Leuchtreklame & Metalltechnik | G & B Reklamebau"
+      content="Blog – Leuchtreklame & Metalltechnik Tipps Graz | G & B Reklamebau"
     />
     <meta
       name="description"
-      content="Erfahren Sie mehr über Lichtwerbung, LED-Technik, Metalltechnik und aktuelle Trends. Expertenwissen von G & B Reklamebau aus Graz."
+      content="Expertenwissen zu Leuchtreklame, LED Lichtwerbung & Metalltechnik in Graz. Tipps, Trends und Fallstudien vom geprüften Werbe- und Metalltechniker G & B Reklamebau."
     />
     <meta
       name="keywords"
-      content="Leuchtreklame Blog, Lichtwerbung Tipps, LED Buchstaben Ratgeber, Metalltechnik Trends, Werbetechnik Graz, Reklamebau News"
+      content="Leuchtreklame Blog Graz, Lichtwerbung Tipps, LED Buchstaben Ratgeber, Metalltechnik Trends 2026, Werbetechnik Graz, Reklamebau News, LED vs Neon, Fallstudien Werbeschilder"
     />
     <meta name="author" content="G & B Reklamebau" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -43,6 +43,12 @@
       property="og:image"
       content="https://gbreklamebau.com/assets/images/reklamebau/product10.jpg"
     />
+    <meta
+      property="og:image:alt"
+      content="G & B Reklamebau Blog – Leuchtreklame & Metalltechnik Graz"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="de_AT" />
 
     <!-- Twitter -->
@@ -59,6 +65,23 @@
     <meta
       property="twitter:image"
       content="https://gbreklamebau.com/assets/images/reklamebau/product10.jpg"
+    />
+
+    <!-- Hreflang -->
+    <link
+      rel="alternate"
+      hreflang="de-AT"
+      href="https://gbreklamebau.com/blog.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="de"
+      href="https://gbreklamebau.com/blog.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://gbreklamebau.com/blog.html"
     />
 
     <!-- Favicon -->
@@ -268,14 +291,83 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Blog",
-        "name": "G & B Reklamebau Blog",
-        "description": "Expertenwissen, Tipps und Trends zu Leuchtreklame und Metalltechnik",
-        "url": "https://gbreklamebau.com/blog.html",
-        "publisher": {
-          "@id": "https://gbreklamebau.com/#organization"
-        },
-        "inLanguage": "de-AT"
+        "@graph": [
+          {
+            "@type": "Blog",
+            "name": "G & B Reklamebau Blog",
+            "description": "Expertenwissen, Tipps und Trends zu Leuchtreklame und Metalltechnik in Graz",
+            "url": "https://gbreklamebau.com/blog.html",
+            "publisher": { "@id": "https://gbreklamebau.com/#organization" },
+            "inLanguage": "de-AT",
+            "blogPost": [
+              {
+                "@type": "BlogPosting",
+                "headline": "Tipps für effektive Lichtwerbung",
+                "url": "https://gbreklamebau.com/blog/tipps-lichtwerbung.html",
+                "datePublished": "2026-02-09",
+                "dateModified": "2026-06-02",
+                "image": "https://gbreklamebau.com/assets/images/lichtwerbung.jpg",
+                "author": {
+                  "@type": "Organization",
+                  "name": "G & B Reklamebau"
+                }
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "LED vs. traditionelle Leuchtreklame – Der große Vergleich",
+                "url": "https://gbreklamebau.com/blog/led-vs-traditionell.html",
+                "datePublished": "2026-02-09",
+                "dateModified": "2026-06-02",
+                "image": "https://gbreklamebau.com/assets/images/einzelbuchstaben.jpg",
+                "author": {
+                  "@type": "Organization",
+                  "name": "G & B Reklamebau"
+                }
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "Metalltechnik Trends 2026 – Innovation & Nachhaltigkeit",
+                "url": "https://gbreklamebau.com/blog/metalltechnik-trends.html",
+                "datePublished": "2026-02-09",
+                "dateModified": "2026-06-02",
+                "image": "https://gbreklamebau.com/assets/images/metalltechnik/product1.jpg",
+                "author": {
+                  "@type": "Organization",
+                  "name": "G & B Reklamebau"
+                }
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "Erfolgreiche Projekte – Fallstudien unserer Arbeiten",
+                "url": "https://gbreklamebau.com/blog/projekt-fallstudien.html",
+                "datePublished": "2026-02-09",
+                "dateModified": "2026-06-02",
+                "image": "https://gbreklamebau.com/assets/images/einzelbuchstaben.jpg",
+                "author": {
+                  "@type": "Organization",
+                  "name": "G & B Reklamebau"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://gbreklamebau.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://gbreklamebau.com/blog.html"
+              }
+            ]
+          }
+        ]
       }
     </script>
   </body>
