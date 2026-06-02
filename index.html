@@ -1014,12 +1014,6 @@
           .then((response) => response.text())
           .then((data) => {
             document.getElementById("contact-form-top").innerHTML = data;
-
-            // Update form action with your Formspree ID
-            const form = document.querySelector(".contact-form");
-            if (form) {
-              form.action = "https://formspree.io/f/xzdwljqb";
-            }
           });
 
         // Automatic image slideshow

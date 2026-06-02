@@ -190,6 +190,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   forms.forEach((form) => {
     form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
       const submitBtn = this.querySelector(".submit-btn");
       if (submitBtn) {
         submitBtn.innerHTML =
@@ -197,15 +199,42 @@ document.addEventListener("DOMContentLoaded", function () {
         submitBtn.disabled = true;
       }
 
-      // Formspree will handle the actual submission
-      // This just provides visual feedback
-      setTimeout(() => {
-        if (submitBtn) {
-          submitBtn.innerHTML =
-            'Nachricht senden <i class="fa fa-paper-plane"></i>';
-          submitBtn.disabled = false;
-        }
-      }, 2000);
+      fetch(this.action, {
+        method: "POST",
+        body: new FormData(this),
+        headers: { Accept: "application/json" },
+      })
+        .then((response) => {
+          if (response.ok) {
+            if (submitBtn) {
+              submitBtn.innerHTML = '<i class="fa fa-check"></i> Gesendet!';
+            }
+            form.reset();
+            setTimeout(() => {
+              if (submitBtn) {
+                submitBtn.innerHTML =
+                  'Nachricht senden <i class="fa fa-paper-plane"></i>';
+                submitBtn.disabled = false;
+              }
+            }, 3000);
+          } else {
+            return response.json().then((data) => {
+              throw new Error(
+                data.errors
+                  ? data.errors.map((e) => e.message).join(", ")
+                  : "Fehler beim Senden.",
+              );
+            });
+          }
+        })
+        .catch((err) => {
+          if (submitBtn) {
+            submitBtn.innerHTML =
+              '<i class="fa fa-times"></i> Fehler – Bitte erneut versuchen';
+            submitBtn.disabled = false;
+          }
+          console.error("Form submission error:", err);
+        });
     });
   });
 });
