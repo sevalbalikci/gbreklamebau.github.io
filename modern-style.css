@@ -1759,12 +1759,23 @@ img {
     padding: 3rem 0;
   }
 
+  .hero-image-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
   .hero-image-grid {
     grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .hero-image-grid img {
+    height: 200px;
   }
 
   .hero-image-grid img:nth-child(3) {
     grid-column: 1 / 2;
+    height: 220px;
   }
 
   .products-grid {
@@ -1795,6 +1806,10 @@ img {
 
   .footer-section {
     text-align: center;
+  }
+
+  .contact-item {
+    text-align: left;
   }
 
   .footer-section ul {
