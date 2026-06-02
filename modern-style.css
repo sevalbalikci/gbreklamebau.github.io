@@ -1195,7 +1195,7 @@ img {
    ================================================ */
 
 .modern-footer {
-  background: linear-gradient(135deg, #818181 0%, #001a35 100%);
+  background: linear-gradient(135deg, #d0d0d0 0%, #001a35 100%);
   color: var(--white);
   padding: 0;
   position: relative;
