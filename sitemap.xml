@@ -55,6 +55,14 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- AGB Page -->
+  <url>
+    <loc>https://gbreklamebau.com/agb.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
   <!-- FAQ Page -->
   <url>
     <loc>https://gbreklamebau.com/faq.html</loc>
